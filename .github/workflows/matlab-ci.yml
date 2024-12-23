@@ -6,12 +6,12 @@ name: MATLAB Build
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    # branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
-  schedule:
-    - cron:  '55 20 * * 5' # schedule a weekly build
+  # schedule:
+    # - cron:  '55 20 * * 5' # schedule a weekly build
 
 
     
@@ -23,7 +23,6 @@ jobs:
       matrix:
         platform: [ubuntu-latest, windows-latest, macos-13]
     # The type of runner that the job will run on
-    # runs-on: ${{ matrix.platform }}
     runs-on: self-hosted
 
     permissions:
