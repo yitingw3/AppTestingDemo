@@ -15,8 +15,6 @@ on:
   # schedule:
     # - cron:  '55 20 * * 5' # schedule a weekly build
 
-
-    
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -42,13 +40,11 @@ jobs:
       #   # with:
       #   #   cache: true
 
-      - name: Setup display
-        uses: pyvista/setup-headless-display-action@v2
-        with:
-          pyvista: false
+      # - name: Setup display
+      #   uses: pyvista/setup-headless-display-action@v2
+      #   with:
+      #     pyvista: false
 
-
-    
       - name: Produce MD from MLX
         uses: matlab-actions/run-build@v2
         with:
